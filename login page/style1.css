@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins',sans-serif;
+}
+:root{
+	--main-color: #fe5b3d;
+	--second-color: #ffac38;
+	--text-color: #444;
+	--gradient: linear-gradient(#fe5b3d,#ffac38);
+}
+body{
+	width: 100%;
+	min-height: 110vh;
+	position: relative;
+	background: url("D:/Car Rentel Website Images/img/Design.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: cover;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+}
+.container{
+	max-width: 700px;
+	width: 100%;
+	background: #fff;
+	padding: 25px 30px;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	background: white;
+	border-radius: 1rem;
+	box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+}
+.title{
+	position: absolute;
+	left: 28%;
+	bottom: 0%;
+	top: 0%;
+}
+.container .title{
+	font-size: 25px;
+	font-weight: 600;
+	position: relative;
+}
+.container .title::before{
+	content: '';
+	position: absolute;
+	left: -2%;
+	bottom: -8%;
+	height: 3px;
+	width: 180px;
+	background: var(--main-color);
+}
+.container form .user-details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+form .user-details .input-box{
+	margin-bottom: 15px;
+	width: calc(100% / 2 - 50px);
+}
+.user-details .input-box .details{
+	display: block;
+	fonnt-weight:  500;
+	margin-bottom: 5px;
+}
+.user-details .input-box input{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #fe5b3d;
+	padding-left: 15px;
+	font-size: 16px;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+border-color: #474fa0;
+}
+form.gender-details .gender-title{
+	font-size: 25px;
+	font-weight: 500;
+
+}
+form .gender-details .category{
+	display: flex;
+	width: 150%;
+	height: 20px;
+	margin: 14px;
+	justify-content: space-between;
+}
+.category label input{
+	display: none;
+}
+.category label{
+	display: block;
+	cursor: pointer;
+	margin-right: 10px;
+	padding-left: 20;
+	position: relative;
+}
+.category label .circle{
+	height: 15px;
+	width: 15px;
+	border: 2.5px solid var(--text-color);
+	border-radius: 50%;
+	display: inline-block;
+	transition: border-color .5s ease;
+}
+.category label .circle::before{
+	content:'';
+	height: 7px;
+	width: 7px;
+	background-color: var(--main-color);
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin-left: 4px;
+	margin-top: 4px;
+	transition: transform .5s ease;
+	transform: scale(0);
+}
+.category label span{
+	font-size: 15px;
+	color: var(--text-color);
+	display: inline-block;
+	transition:color .5s ease;
+}
+.category label input:checked + .circle{
+	border-color: var(--main-color);
+}
+.category label input:checked + .circle::before{
+	transform: scale(1);
+}
+.category label input:checked + .circle + span{
+	color: var(--main-color);
+}
+input[type="submit"]{
+	width: 180%;
+	height: 40px;
+	border: none;
+	background:#474fa0;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	outline: none;
+}
+input[type="submit"]:hover{
+	background: var(--main-color);
+	transition: .3s;
